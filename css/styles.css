@@ -1,0 +1,39 @@
+/* There are three main ways to bring a font to our projects.
+1. Use a system font or font stack (something the user already has installed on their machine).
+2. Use an online font library (such as Google fonts) 
+3. Use a custom self-hosted font (not the best option for performance*/
+
+@font-face {
+    font-family: 'typewriter';
+    src: url('../fonts/veteran_typewriter_regular-webfont.woff2') format('woff2'),
+         url('../fonts/veteran_typewriter_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    /* for performance reasons and to avoid invisible text during font loading */
+    font-display: swap;
+}
+
+body {
+    /* place the base, paragraph font styling on the body element */
+    font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace; 
+    font-family: 'typewriter', 'Courier New', Courier, monospace;
+    background-color: #dedcda;
+}
+
+h2 {
+    font-family: 'Arimo', sans-serif;
+font-family: 'Beth Ellen', cursive;
+color: #3b373f;
+
+}
+
+section {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+    /* when rotating the flex container, the justify-content and align-items properties also rotate. So justisfy-content goes top to bottom and align-items goes left to right */
+    justify-content: center;
+    align-items: center;
+}
